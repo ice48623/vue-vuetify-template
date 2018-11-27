@@ -1,8 +1,17 @@
 import Vue from 'vue'
+import './plugins/axios'
+import './plugins/vuetify'
 import App from './App.vue'
+import router from './router'
+import Vuetify from 'vuetify/lib'
+import 'vuetify/src/stylus/app.styl'
 
-Vue.config.productionTip = false
+Vue.use(Vuetify, {
+    iconfont: 'md',
+});
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  render: h => h(App)
+}).$mount('#app');
